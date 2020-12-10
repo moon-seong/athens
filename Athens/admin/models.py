@@ -45,7 +45,7 @@ class teacher_tbl(models.Model):
     t_birth = models.DateField(null=True, blank=True)
     t_state = models.BooleanField(null=True)
     t_add = models.CharField(max_length=50, null=True)
-    t_join = models.DateField(auto_now_add=True)
+    t_join = models.DateField(auto_now_add=True,null=True)
     # 사진이 저장될 때의 경로 -> upload_to
     t_file = models.ImageField(upload_to='teacher/', blank=True, null=True)
     t_out = models.DateField(null=True)
@@ -178,7 +178,6 @@ class test_apply(models.Model):
 # 상담
 class consult_tbl(models.Model):
     cu_no = models.AutoField(primary_key=True)
-    cu_cust = models.CharField(max_length=20)
     cu_join_time = models.DateTimeField(null=True)
     cu_res_time = models.DateTimeField(null=True)
     cu_content = models.TextField(null=True,blank=True)

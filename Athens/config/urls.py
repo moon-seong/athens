@@ -28,7 +28,7 @@ urlpatterns = [
     path('teacher/', include('notice.urls')),
     path('',include('signup.urls')),
     path('find/', include('find.urls')),
-    path('main/', include('mainpage.urls')),
+    path('', include('mainpage.urls')),
     path('my/', include('mypage.urls')),
     path('order/', include('order.urls')),
     path('sign/', include('sign.urls')),
